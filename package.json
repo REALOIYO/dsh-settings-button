@@ -31,11 +31,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_NAME/dsh-settings-button.git"
+    "url": "git+https://github.com/REALOIYO/dsh-settings-button.git"
   },
-  "homepage": "https://github.com/YOUR_NAME/dsh-settings-button#readme",
+  "homepage": "https://github.com/REALOIYO/dsh-settings-button#readme",
   "bugs": {
-    "url": "https://github.com/YOUR_NAME/dsh-settings-button/issues"
+    "url": "https://github.com/REALOIYO/dsh-settings-button/issues"
   },
   "dsh": {
     "bundle": {
