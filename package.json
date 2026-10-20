@@ -1,0 +1,52 @@
+{
+  "name": "dsh-settings-button",
+  "version": "1.0.0",
+  "description": "A gear button beside the sidebar account row that opens the DSH Settings dialog directly, on desktop and over the LAN.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "settings",
+    "sidebar",
+    "ui"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_NAME/dsh-settings-button.git"
+  },
+  "homepage": "https://github.com/YOUR_NAME/dsh-settings-button#readme",
+  "bugs": {
+    "url": "https://github.com/YOUR_NAME/dsh-settings-button/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-shortcuts"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# dsh-settings-button profile patch layer — insert one loader entry.
+# The browser half is picked up through the package's dsh.client declaration,
+# exactly like the shipped ui-* packages.
+- insert:
+    - id: settings-button
+      name: 'dsh-settings-button'
