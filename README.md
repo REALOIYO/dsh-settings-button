@@ -31,19 +31,30 @@ This plugin puts a gear right next to the phone number and opens Settings direct
 
 ## 安装 / Installation
 
+从 GitHub 直接安装（本包尚未发布到 npm / not on npm yet）：
+
 ```bash
-dsh plugin add dsh-settings-button
+dsh plugin add github:REALOIYO/dsh-settings-button
 ```
 
 或在 DSH profile 目录（通常是 `~/.dsh/profiles/desktop`）中：
 
 ```bash
-pnpm add dsh-settings-button
+pnpm add github:REALOIYO/dsh-settings-button
 ```
 
 然后确认它出现在 `package.json` 的 `dsh.profile.bundles` 数组里 —— **不在该数组中宿主不会加载它**。重启 DSH 生效。
 
+Install straight from GitHub (this package is not on npm yet):
+
+```bash
+dsh plugin add github:REALOIYO/dsh-settings-button
+```
+
 Then make sure it is listed in `dsh.profile.bundles` in your profile's `package.json` — **the host does not load bundles that are absent from that array**. Restart DSH to take effect.
+
+> 发布到 npm 之后，上面的命令可以简写为 `dsh plugin add dsh-settings-button`。
+> Once published to npm, that shortens to `dsh plugin add dsh-settings-button`.
 
 ## 卸载 / Removal
 
