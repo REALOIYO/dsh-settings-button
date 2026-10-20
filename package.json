@@ -6,9 +6,11 @@
     "dsh",
     "dsh-plugin",
     "deepseek-harness",
+    "deepseek",
     "settings",
     "sidebar",
-    "ui"
+    "ui",
+    "cordis"
   ],
   "type": "module",
   "main": "lib/index.js",
