@@ -1,7 +1,7 @@
 # dsh-settings-button
 
 [![](https://img.shields.io/badge/powered_by-dsh-4D6BFE?style=flat-square&logo=deepseek&logoColor=white)](https://github.com/deepseek-ai/deepseek-harness)
-[![npm](https://img.shields.io/badge/npm-not%20published-lightgrey?style=flat-square)](#installation)
+[![install](https://img.shields.io/badge/install-dsh%20plugin%20add-4D6BFE?style=flat-square)](#installation)
 [![license](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
 一个齿轮按钮，直接打开 **DeepSeek Harness（DSH）** 的设置面板 —— 桌面端、手机端、局域网访问都一次点击直达。
