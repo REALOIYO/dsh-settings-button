@@ -1,6 +1,6 @@
 {
   "name": "dsh-settings-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A gear button beside the sidebar account row that opens the DSH Settings dialog directly, on desktop and over the LAN.",
   "keywords": [
     "dsh",

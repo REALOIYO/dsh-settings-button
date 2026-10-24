@@ -77,9 +77,41 @@ The settings shell keeps its open state in a private store. Two entry points exi
 
 ## 兼容性 / Compatibility
 
-- 面向 DSH `0.2.1-rc.2` 开发 / Built against DSH `0.2.1-rc.2`
-- 不依赖任何 CSS 类名哈希，宿主重新构建不影响 / No dependency on hashed CSS class names
+- 面向 DSH `0.2.1-rc.3` 开发 / Built against DSH `0.2.1-rc.3`
+- 与 `0.2.1-rc.2` 及更早版本兼容（定位逻辑带逐级回落）
+  / Works on `0.2.1-rc.2` and earlier too — the locator falls back step by step
 - 不绑定键盘快捷键，局域网设备可用 / No keyboard shortcut involved
+
+### 定位策略 / How the row is located
+
+`0.2.1-rc.3` 给侧边栏新增了一个「更多」按钮，它**同样**带
+`aria-label` + `aria-haspopup="menu"`，且在文档顺序上排在账号行之前。
+旧版用 `document.querySelector('button[aria-haspopup="menu"][aria-label]')`
+取全局首个匹配，于是齿轮被挂到了「更多」旁边。
+
+`0.2.1-rc.3` added a sidebar **More** button that carries the *same*
+`aria-label` + `aria-haspopup="menu"` pair and appears **earlier in document
+order**. The old locator took the first global match, so the gear got portalled
+next to More instead of into the account row.
+
+v1.0.1 起改为三级定位，每级都做了作用域收敛：
+
+Since v1.0.1 the locator is three-tiered, each tier scoped:
+
+| 顺序 | 选择器 | 唯一性依据 |
+|---|---|---|
+| 1 | `button[data-signed-out]` | 账号行无条件渲染该属性（登录时为字符串 `"false"`），「更多」按钮没有 |
+| 2 | `[class*="settingsArea"] button[aria-haspopup="menu"]` | 限定在 `sidebar.settings` 槽位容器内 |
+| 3 | 全局 `aria-haspopup` 匹配，但排除 `footerActions` 内的元素 | 兼容旧宿主 |
+
+> 第 2 级用了 `[class*="settingsArea"]` 属性子串匹配，因为该 class 由 CSS Module
+> 编译带哈希前缀（实际为 `wtg9ga_settingsArea`）。**子串匹配在宿主改变命名时仍有效**，
+> 但它确实是一个类名依赖 —— 与「完全不依赖类名」的旧表述不同，特此更正。
+
+> Tier 2 relies on a `[class*="settingsArea"]` substring match because the class
+> is CSS-Module-hashed (actually `wtg9ga_settingsArea`). It survives renames, but it
+> *is* a class-name dependency — correcting the earlier "no class-name dependency"
+> claim.
 
 ## 许可 / License
 
