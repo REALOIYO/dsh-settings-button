@@ -12,19 +12,18 @@ A gear button that opens the **DeepSeek Harness (DSH)** Settings dialog in one c
 
 ## 为什么需要它 / Why
 
-官方的设置入口藏了两层，体验不佳。
+官方的设置入口要点两下，操作上不舒服。
 
-桌面端可以按快捷键，但从手机通过局域网打开 Web GUI 时**没有键盘**，想进设置只能：点开左下角的账号菜单 → 再点菜单里的「设置」。每次两步。
+先在左下角点开账号菜单，再点菜单里的「设置」。桌面端有快捷键还好，手机上通过局域网访问时没有键盘，只能老老实实点这两下。
 
-这个插件在账号行右侧放一个齿轮，一次点击直达设置面板。
+这个插件在账号行右侧放一个齿轮，点一下就开。
 
-The host buries Settings two levels deep, which reads poorly. On desktop you can
-press a shortcut, but when you open the Web GUI **from a phone over the LAN there
-is no keyboard**, so reaching Settings means opening the account menu first and
-picking "Settings" from it. Two steps, every time.
+Reaching Settings takes two clicks, which feels clumsy. You open the account menu
+at the bottom left, then pick "Settings" from it. On desktop a shortcut saves you;
+from a phone over the LAN there is no keyboard, so those two clicks are the only
+way in.
 
-This plugin puts a gear right next to the phone number and opens Settings
-directly.
+This plugin puts a gear right next to the phone number. One click.
 
 ---
 
